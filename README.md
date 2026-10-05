@@ -33,7 +33,16 @@ duplicate rows and rows with invalid target values. Feature missing values are
 imputed within the training pipeline; numeric columns are standardized and
 categorical columns one-hot encoded. Sensor outliers are reported, not removed
 automatically, because extreme readings may be meaningful.
+## Frontend dashboard
 
+A browser-based dashboard is available to view the saved metrics, prediction
+sample, and generated plots without using the terminal:
+
+```powershell
+python server.py
+```
+
+Then open `http://127.0.0.1:8000` in your browser.
 The test split holds out complete `Equipment_ID` groups. The ID is excluded from
 model features, reducing the chance that equipment-specific patterns leak into
 the test score. This evaluates generalization to equipment not seen during

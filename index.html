@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RUL Prediction Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Remaining Useful Life</p>
+          <h1>Model Evaluation Dashboard</h1>
+        </div>
+        <button id="refreshButton" class="primary-btn">Refresh data</button>
+      </header>
+
+      <main>
+        <section class="summary-grid" id="metricsGrid"></section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Dataset summary</h2>
+          </div>
+          <div class="stats-row" id="datasetSummary"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Prediction preview</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead id="tableHead"></thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Evaluation plots</h2>
+          </div>
+          <div class="image-grid" id="plotGrid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
