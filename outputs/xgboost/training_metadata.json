@@ -1,0 +1,99 @@
+{
+  "model": "XGBRegressor",
+  "target_column": "RUL_Cycles",
+  "group_column_excluded_from_features": "Equipment_ID",
+  "feature_columns": [
+    "Cycle",
+    "Equipment_Age_Years",
+    "Operating_Hours",
+    "Load_Percent",
+    "RPM",
+    "Ambient_Temperature_C",
+    "Humidity_Percent",
+    "Vibration_mm_s",
+    "Temperature_C",
+    "Pressure_bar",
+    "Current_A",
+    "Voltage_V",
+    "Oil_Temperature_C",
+    "Flow_Rate_L_min",
+    "Acoustic_dB",
+    "Maintenance_Count"
+  ],
+  "numeric_features": [
+    "Cycle",
+    "Equipment_Age_Years",
+    "Operating_Hours",
+    "Load_Percent",
+    "RPM",
+    "Ambient_Temperature_C",
+    "Humidity_Percent",
+    "Vibration_mm_s",
+    "Temperature_C",
+    "Pressure_bar",
+    "Current_A",
+    "Voltage_V",
+    "Oil_Temperature_C",
+    "Flow_Rate_L_min",
+    "Acoustic_dB",
+    "Maintenance_Count"
+  ],
+  "categorical_features": [],
+  "train_rows": 9600,
+  "test_rows": 2400,
+  "train_equipment_count": 96,
+  "test_equipment_count": 24,
+  "training_target_mean": 46.741283333333335,
+  "cv_method": "GroupKFold",
+  "cv_folds": 3,
+  "cv_best_mean_rmse": 23.269588123833298,
+  "selected_parameters": {
+    "n_estimators": 250,
+    "max_depth": 1,
+    "learning_rate": 0.03
+  },
+  "cv_results": [
+    {
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": 1,
+        "learning_rate": 0.05
+      },
+      "mean_rmse": 23.489642880715607,
+      "std_rmse": 1.920818853611424
+    },
+    {
+      "parameters": {
+        "n_estimators": 250,
+        "max_depth": 1,
+        "learning_rate": 0.03
+      },
+      "mean_rmse": 23.269588123833298,
+      "std_rmse": 1.8527772080215459
+    },
+    {
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": 2,
+        "learning_rate": 0.05
+      },
+      "mean_rmse": 23.523501617237013,
+      "std_rmse": 1.4079720383311425
+    },
+    {
+      "parameters": {
+        "n_estimators": 250,
+        "max_depth": 2,
+        "learning_rate": 0.03
+      },
+      "mean_rmse": 23.882632326792006,
+      "std_rmse": 1.0319423885815087
+    }
+  ],
+  "test_size": 0.2,
+  "random_state": 42,
+  "model_path": "C:\\Users\\SARVESH\\Desktop\\Project_RUL\\sunitaHub\\outputs\\xgboost\\xgboost_pipeline.joblib",
+  "duplicate_rows_removed": 0,
+  "invalid_target_rows_removed": 0,
+  "rows_after_cleaning": 12000
+}
